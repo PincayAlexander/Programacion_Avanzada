@@ -37,7 +37,7 @@ class rectangulo(figura):
     def area(self):
         return self.getBase() * self.getAltura()
     def perimetro(self):
-        return 2*self.getBase() + 2*self.getAltura()
+        return (2 * self.getBase()) + (2 * self.getAltura())
     
 class triangulo_rectangulo(figura):
     def __init__(self, base, altura): 
@@ -61,13 +61,11 @@ class hexagono(figura):
     def info(self):
         print("HEXAGONO")
         super().info()
-        print(f"Apotema: {self.apotema()}      Perimetro: {self.perimetro()}      Area: {self.area()}")
-    def apotema(self):
-        return self.getAltura() * 0.5    
+        print(f"Perimetro: {self.perimetro()}      Area: {self.area()}") 
     def area(self):
-        return (self.perimetro() * self.apotema()) / 2
+        return ((self.getBase() * self.getAltura()) / 2 ) * 12
     def perimetro(self):
-        return self.getBase() * 6
+        return self.getBase() * 12
     
 class menu_figura:
     def __init__(self): 
