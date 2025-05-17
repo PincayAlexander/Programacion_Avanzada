@@ -26,6 +26,9 @@ class MetodosLista:
             print("El valor no está en la lista.")
     
     def mostrar_items(self):
+        if not self.__elementos:
+            print("La lista está vacía.")
+            return           
         print(self.__elementos)
 
     def calcular_promedio(self):
