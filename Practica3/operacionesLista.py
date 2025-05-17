@@ -1,38 +1,38 @@
 class MetodosLista:
     def __init__(self, L = [], tam = 0):
-        self.elementos = L
-        self.tam = tam
+        self.__elementos = L
+        self.__tam = tam
 
     def ingresar_items(self, tam):
-        self.elementos = []
-        self.tam = tam
+        self.__elementos = []
+        self.__tam = tam
         i = 0
-        while i < self.tam:
+        while i < self.__tam:
             try:
                 item = int(input(f"Elemento {i + 1}  ->  "))
-                self.elementos.append(item)
+                self.__elementos.append(item)
                 i += 1
             except ValueError:
                 print("Entrada no válida. Debe ingresar un número")
 
     def eliminar_item(self, valor):
-        if not self.elementos:
+        if not self.__elementos:
             print("La lista está vacía.")
             return
         try:
-            self.elementos.remove(valor)
+            self.__elementos.remove(valor)
             print(f"Elemento {valor} eliminado.")
         except ValueError:
             print("El valor no está en la lista.")
     
     def mostrar_items(self):
-        print(self.elementos)
+        print(self.__elementos)
 
     def calcular_promedio(self):
-        if not self.elementos:
+        if not self.__elementos:
             print("La lista está vacía.")
             return
-        return sum(self.elementos) / self.tam
+        return sum(self.__elementos) / self.__tam
 
     def calcular_factorial(self):
         try:
@@ -65,23 +65,23 @@ class MetodosLista:
             return
 
     def buscar_item_mayor(self):
-        if not self.elementos:
+        if not self.__elementos:
             print("La lista está vacía.")
             return
-        return max(self.elementos)
+        return max(self.__elementos)
 
     def buscar_item_menor(self):
-        if not self.elementos:
+        if not self.__elementos:
             print("La lista está vacía.")
             return
-        return min(self.elementos)
+        return min(self.__elementos)
 
     def order_items(self):
-        if not self.elementos:
+        if not self.__elementos:
             print("La lista está vacía.")
             return
-        self.elementos.sort()
-        print(f"\nLista ordenada: {self.elementos}")
+        self.__elementos.sort()
+        print(f"\nLista ordenada: {self.__elementos}")
 
 def menu():
     lista = MetodosLista()
