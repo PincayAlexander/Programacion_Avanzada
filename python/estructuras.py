@@ -1,6 +1,7 @@
 # Estructuras de datos en Python
 
-print("\n=== 5.1 listas ===")
+# Listas
+print("\n=== Listas ===")
 fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
 print("Lista original:", fruits)
 
@@ -31,8 +32,8 @@ popped = fruits.pop()
 print("\nElemento eliminado con pop():", popped)  # 'pear'
 print("Lista después de pop():", fruits)
 
-# 5.1.1 Usar listas como pilas (LIFO)
-print("\n\n=== 5.1.1 Pilas (LIFO) ===")
+#  Usar listas de tipo pilas (LIFO)
+print("\n\n=== Pilas (LIFO) ===")
 stack = [3, 4, 5]
 print("Pila inicial:", stack)
 stack.append(6)
@@ -42,8 +43,8 @@ print("Elemento sacado con pop():", stack.pop())  # 7
 print("Elemento sacado con pop():", stack.pop())  # 6
 print("Pila final:", stack)  # [3, 4, 5]
 
-# 5.1.2 Usar listas como colas (FIFO)
-print("\n\n=== 5.1.2 Colas (FIFO) ===")
+# Usar listas de tipo cola (FIFO)
+print("\n\n=== Colas (FIFO) ===")
 from collections import deque
 queue = deque(["Eric", "John", "Michael"])
 print("Cola inicial:", queue)
@@ -54,8 +55,8 @@ print("Elemento sacado con popleft():", queue.popleft())  # 'Eric'
 print("Elemento sacado con popleft():", queue.popleft())  # 'John'
 print("Cola final:", queue)
 
-# 5.1.3 Comprensión de listas
-print("\n\n=== 5.1.3 Comprensión de listas ===")
+# Comprensión de listas
+print("\n\n=== Comprensión de listas ===")
 # Crear lista de cuadrados
 squares = [x**2 for x in range(10)]
 print("\nCuadrados (0-9):", squares)
@@ -85,8 +86,8 @@ print("Aplanada:", [num for row in vec2d for num in row])
 from math import pi
 print("\nRedondeos de pi:", [str(round(pi, i)) for i in range(1, 6)])
 
-# 5.1.4 Comprensiones anidadas
-print("\n\n=== 5.1.4 Comprensiones anidadas ===")
+# Comprensiones anidadas
+print("\n\n=== Comprensiones anidadas ===")
 matrix = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
@@ -117,8 +118,8 @@ for row in transposed_manual:
 print("\nTranspuesta con zip():")
 print(list(zip(*matrix)))
 
-# 5.2 Instrucción del
-print("\n\n=== 5.2 Instrucción del ===")
+# Instrucción del
+print("\n\n=== Instrucción del ===")
 a = [-1, 1, 66.25, 333, 333, 1234.5]
 print("\nLista original:", a)
 del a[0]
@@ -130,8 +131,8 @@ print("Vaciar lista (del a[:]):", a)
 del a
 # print(a)  # Error: 'a' ya no existe
 
-# 5.3 Tuplas y secuencias
-print("\n\n=== 5.3 Tuplas y secuencias ===")
+# Tuplas y secuencias
+print("\n\n=== Tuplas y secuencias ===")
 t = 12345, 54321, 'hello!'
 print("\nTupla creada:", t)
 print("Elemento t[0]:", t[0])
@@ -154,8 +155,8 @@ x, y, z = t
 print("\nDesempaquetado de tupla:")
 print("x =", x, ", y =", y, ", z =", z)
 
-# 5.4 Conjuntos
-print("\n\n=== 5.4 Conjuntos ===")
+# Conjuntos
+print("\n\n=== Conjuntos ===")
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 print("\nConjunto (duplicados eliminados):", basket)
 
@@ -178,8 +179,8 @@ print("a ^ b (diferencia simétrica):", a ^ b)
 print("\nComprensión de conjuntos:")
 print({x for x in 'abracadabra' if x not in 'abc'})
 
-# 5.5 Diccionarios
-print("\n\n=== 5.5 Diccionarios ===")
+# Diccionarios
+print("\n\n=== Diccionarios ===")
 tel = {'jack': 4098, 'sape': 4139}
 print("\nDiccionario inicial:", tel)
 tel['guido'] = 4127
