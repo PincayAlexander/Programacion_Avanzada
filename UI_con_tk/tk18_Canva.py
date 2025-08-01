@@ -23,7 +23,7 @@ linea = canvas.create_line(100, 30, 120, 60, 50, 90, 100, 150, fill="black", wid
 rectangulo = canvas.create_rectangle(40, 160, 100, 200, fill="white")
 
 # Cargar y colocar una imagen en el canvas
-img = tk.PhotoImage(file="imagen.png").subsample(5,5)
+img = tk.PhotoImage(file="UI_con_tk/imagen.png").subsample(5,5)
 canvas.create_image(300, 250, image=img, anchor="center")
 canvas.imagen = img   # Mantener la referencia a la imagen
 
