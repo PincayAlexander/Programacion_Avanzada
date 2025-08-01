@@ -7,7 +7,7 @@ def ubicacionClick(event):
 # Configuración inicial de la ventana
 root = tk.Tk()
 root.title("Eventos de Mouse")            # Título de la ventana
-root.geometry("400x200++150+150")         # Tamaño y posición de la ventana
+root.geometry("400x200+150+150")         # Tamaño y posición de la ventana
 root.resizable(False, False)              # No se puede redimensionar la ventana
 
 # Etiqueta
