@@ -18,6 +18,7 @@ root.resizable(False, False)              # No se puede redimensionar la ventana
 lbl = tk.Label(root, text="Haz clic o \npresiona una tecla", font="Consolas 14")
 lbl.config(bg="#c7f6ed")        # fondo de la etiqueta
 lbl.pack(expand=True, fill="both")
+lbl.focus_set()
 
 # Bind de eventos
 lbl.bind("<Button-1>", click)  # Clic izquierdo
